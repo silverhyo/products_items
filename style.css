@@ -1,0 +1,366 @@
+/*fonts.css*/
+@font-face {
+    font-family: "TT-norms";
+    src: url("srcs/TT\ Norms\ Pro\ Medium.ttf") format("truetype");
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    /* height: 100vh; */
+    width: 100%;
+    font-family: "TT-norms";
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
+/* ====================================BORDER */
+/* .container {
+    border: 3px solid red;
+}
+.box_logo {
+    border: 1px solid black;
+}
+.box_form {
+    border: 1px solid orange;
+}
+.box_end {
+    border: 1px solid blue;
+} */
+
+/* =======================================BOX */
+.container {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+/* ==============================================box logo */
+.boxlogo {
+    width: 100%;
+    height: 60px;
+    background-color: #FFF100;
+    position: relative;
+}
+.logoimage {
+    position: absolute;
+    width : 160px;
+    height: 30px;
+    left: 20px;
+    /* background-color: yellow; */
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.logoimage img {
+    width: 100%
+}
+/* ============================================box_form */
+.boxform {
+    width: 100%;
+    /* height: 300px; */
+    background-color: white;
+    padding: 20px;
+}
+
+.item label,
+.item select {
+    cursor: pointer;
+    font-weight: 500;
+}
+.item {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    font-size: 14px;
+}
+.item label {
+    font-size: 15px;
+}
+.item select {
+    border: 0px;
+    /* border: 1px solid red; */
+    background-color: lightgray;
+    color: rgb(42, 38, 38);
+    height: 35px;
+}
+.submit input {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 40px;
+    border: 0px;
+    font-weight: 600;
+    cursor: pointer;
+    display: none;
+}
+
+#firstchildselect {
+    display: none;
+    animation-duration: 1.5s;
+    animation-name: fadeinout03;
+}
+
+#secondchildselect {
+    display: none;
+    animation-duration: 1.5s;
+    animation-name: fadeinout03;
+}
+
+@keyframes fadeinout03 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ===========================================box_count */
+.boxcount {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 40px;
+    background-color: lightgrey;    
+}
+.boxcount h3 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* =============================================box_item */
+.boxitem {
+    width: 100%;
+    /* height: 600px; */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    row-gap: 8px;
+    column-gap: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom : 0px;
+}
+
+.product {
+    height: 260px;
+    border: 1px dashed orange;
+    /* background-color: #FFF100; */
+    display: flex;
+    flex-direction: column;
+    animation-duration: 1.5s;
+    animation-name: fadeinout01;
+}
+@keyframes fadeinout01 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.productimage {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 210px; 
+    /* 위 250px에 대한 60% */
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* overflow의 위치가 중요 */
+}
+.productimage img {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.productname {
+    /* border: 1px solid blue; */
+    padding: 3px 2px 3px 2px;
+    width: 100%;
+    /* height: 15%; */
+    /* line-height: 20px; */
+    text-align: center;
+    font-weight: 600;
+    font-size: 11px;
+}
+.productdescription {
+    /* border: 1px solid purple; */
+    padding: 2px;
+    width: 100%;
+    color: darkred;
+    /* height: 10%; */
+    /* line-height: 20px; */
+    text-align: center;
+    font-weight: 500;
+    font-size: 10px;
+}
+.productmanufacturer {
+    /* border: 1px solid red; */
+    padding: 2px;
+    width: 100%;
+    /* height: 10%; */
+    /* line-height: 30px; */
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+
+/* ============================================box_end */
+.boxend {
+    margin-top: 80px;
+    width: 100%;
+    height: 170px;
+    background-color: black;
+    color: white;
+    /* position: absolute;
+    bottom: 0px;
+    left: 0px; */
+}
+
+/* ================================================popup */
+.popupcontainer {
+    display: none;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0 auto;
+    position: fixed;
+    animation-duration: 1s;
+    animation-name: fadeinout02;
+}
+
+@keyframes fadeinout02 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.popup {
+    position: relative;
+    /* display: none; */
+    background-color: white;
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+}
+.popupimage {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#popupimagea {
+    width: 100%;
+    height: 100%;
+    scale: 1.2;
+    object-fit: cover;
+}
+.popupclosebutton {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    /* background-color: black; */
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 600;
+}
+.popupbutton {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.popupbutton01,
+.popupbutton02,
+.popupbutton03 {
+    height: 50px;
+    /* line-height: 100px; */
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+.popupbutton01 {
+    background-color: #fff100;
+}
+.popupbutton02 {
+    background-color: lightgrey;
+}
+.popupbutton03 {
+    background-color: black;
+}
+
+.popupbutton01 a,
+.popupbutton02 a,
+.popupbutton03 a {
+    position: relative;
+}
+
+.popupbutton01 a img,
+.popupbutton02 a img,
+.popupbutton03 a img {
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(0, 15%);
+}
+.popupbutton03 a img {
+    filter: invert(100%);
+}
+.popupname {
+    width: 100%;
+    height: 50px;
+    font-weight: 600;
+    background-color: rgb(250, 240, 240);
+    display: flex;
+}
+.popupnamebox {
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+.popupdescription {
+    width: 100%;
+    height: 100%;
+    padding: 20px 15px 10px 15px; 
+    background-color: white;
+    font-size: 13px;
+}
+

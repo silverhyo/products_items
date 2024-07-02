@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =====================================Thumbnail -->
+    <meta property="og:url" content="https://silverhyo.github.io/sartorius_media/" />
+    <meta property="og:title" content="SARTORIUS - MEDIA" />
+    <meta property="og:image" content="./thumbnail/CHO-Media-Bundle_thumbnail.jpg" />
+    <meta property="og:description" content="Media 선택, Media 종류" />
+
+    
+    <!-- Title을 입력 -->
+    <title>Document</title>
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="boxlogo">
+            <div class="logoimage">
+                <img src="image/sartorius-logo-black.png" alt="">
+            </div>
+        </div> 
+
+        <div class="boxform">
+            <form class="filter">
+                <div class="item">
+                    <label for="id01">Selection : Product Type</label>
+                    <select id="id01" name="producttype" onchange="loadParent();">
+                        <option value="">선택해 주세요</option>
+                        <option value="Media">Media</option>
+                        <option value="CellCultureReagent">Cell Culture Reagent</option>
+                        <option value="Filter">Filter</option>
+                        <option value="SingleUseSolution">Single Use Solution</option>
+                        <option value="Balance">Balance</option>
+                        <option value="Equipment">Equipment</option>
+                    </select>
+                </div>
+
+                <div class="item" id="firstchildselect">
+                    <label for="id02">Selection</label>
+                    <select id="id02" name="firstChild" onchange="loadFirstChild();">
+                        <option value="">선택해 주세요</option>
+                        
+                        <!-- ================================mAb -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Media">Media</option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="Clarification">Clarification</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="VirusClearance">Virus Clearance</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================Vaccine -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Media">Media</option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="Clarification">Clarification</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================CGT -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Media">Media</option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="Clarification">Clarification</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================CellTherapy -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Media">Media</option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================Plasma -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="VirusClearance">Virus Clearance</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================Exosome -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="VirusClearance">Virus Clearance</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+                        <!-- ================================FInalFormulation -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="FMT">FMT</option> -->
+                        
+
+                    </select>
+                </div>
+
+                <div class="item" id="secondchildselect">
+                    <label for="id03">Selection : </label>
+                    <select id="id03" name="secondChild" onchange="loadSecondChild();">
+                        <option value="">선택해 주세요</option>
+
+                        <!-- ================================Exosome -->
+                        <!-- <option value=""></option> -->
+                        <!-- <option value="Filter">Filter</option> -->
+                        <!-- <option value="TFF">TFF</option> -->
+                        <!-- <option value="VirusClearance">Virus Clearance</option> -->
+                        <!-- <option value="Chromatography">Chromatography</option> -->
+
+
+
+
+
+                        
+                    </select>
+                </div>
+
+                <div class="item submit">
+                    <input id="submit" type="submit" value="SEARCH">
+                </div>
+            
+
+            </form>
+        </div>
+
+
+        <div class="boxcount">
+            <h3><span id="count"></span> results</h3>
+        </div>
+        
+
+
+        <div class="boxitem">
+            <!-- <div class="product">
+                <div class="productimage">
+                    <img src="" alt="">
+                </div>
+                <div class="productname">
+                </div>
+                <div class='productdescription'>
+                </div>
+                <div class="productmanufacturer">
+                </div>
+            </div> -->
+        </div>
+
+        <div class="boxend">
+            <p></p>
+
+
+        </div>
+
+        <!-- ======================================================POPUP -->
+        <!-- ======================================================POPUP -->
+        <!-- ======================================================POPUP -->
+        <!-- ======================================================POPUP -->
+        <!-- ======================================================POPUP -->
+
+        <div class="popupcontainer">
+            <div class="popup">
+                <div class="popupimage">
+                    <img id="popupimagea" src="" alt="">
+                </div>
+
+                <div class="popupclosebutton">
+                    X
+                </div>
+
+                <div class="popupbutton">
+                    <div class="popupbutton01">
+                        <a href='https://www.sartorius.co.kr/help/'>
+                            <img src="image/letter.png" alt="메일">
+                        </a>
+                    </div>
+                    <div class="popupbutton02">
+                        <a id="popupbutton02a" href=''>
+                            <img src="image/telephone.png" alt="전화">
+                        </a>
+                    </div>
+                    <div class="popupbutton03">
+                        <a id="popupbutton03a" href=''>
+                            <img src="image/file-text.png" alt="전화">
+                        </a>
+                    </div>
+                </div>
+                <div class="popupname">
+                    <div class="popupnamebox">
+
+                    </div>
+                </div>
+                <div class="popupdescription">
+                    설명
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+
+
+    
+
+
+    <!-- Javascript link -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
